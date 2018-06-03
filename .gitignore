@@ -1,0 +1,16 @@
+# IntelliJ
+*.iml
+**/.idea
+
+# Results
+**/target/*
+
+# Mac OS Stuff
+**/.DS_Store
+
+# PyCharm
+venv/*
+
+# Assignment Test Files
+lesson3/prank/*
+**/*.txt
