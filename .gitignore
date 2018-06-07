@@ -14,3 +14,6 @@ venv/*
 # Assignment Test Files
 lesson3/prank/*
 **/*.txt
+
+# .pyc files
+**/*.pyc
