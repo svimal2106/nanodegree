@@ -2,7 +2,7 @@ import webbrowser
 import os
 import re
 
-
+##Credits - https://github.com/udacity/ud036_StarterCode
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>

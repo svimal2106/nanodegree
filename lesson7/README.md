@@ -14,3 +14,5 @@ pip install -r requirements.txt
 ```
 python entertainment_center.py movies.json
 ```
+
+CREDITS - The code to generate HTML has been taken from [Udacity Repo](https://github.com/udacity/ud036_StarterCode)
