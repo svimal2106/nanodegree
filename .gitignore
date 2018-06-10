@@ -13,7 +13,8 @@ venv/*
 
 # Assignment Test Files
 lesson3/prank/*
-**/*.txt
+keys.txt
+lesson6/*.txt
 
 # .pyc files
 **/*.pyc
