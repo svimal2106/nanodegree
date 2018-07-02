@@ -3,6 +3,8 @@ from util import Util
 from media import Movie
 from fresh_tomatoes import open_movies_page
 
+# TODO
+# Add logging
 
 class EntertainmentCenter:
     """
