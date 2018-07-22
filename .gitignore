@@ -18,3 +18,7 @@ lesson6/*.txt
 
 # .pyc files
 **/*.pyc
+
+# Image files
+**/*.png
+**/*.jpg

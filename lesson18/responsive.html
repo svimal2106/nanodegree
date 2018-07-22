@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 200px;
+        }
+
+        .blue {
+            width: 100%;
+            background-color: blue;
+            margin: 5px;
+        }
+
+        .green {
+            width: 100%;
+            background-color: green;
+            margin: 5px;
+        }
+
+        .yellow {
+            width: 100%;
+            background-color: yellow;
+            margin: 5px;
+        }
+
+        @media screen and (min-width: 500px){
+            .blue {
+                width: 50%;
+            }
+            .green {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 700px){
+            .blue {
+                width: 25%;
+            }
+            .green {
+                width: 50%;
+            }
+            .yellow {
+                width: 25%;
+            }
+        }
+
+    </style>
 </head>
 <body>
+
+<div class="parent">
+    <div class="blue">
+        Blue
+    </div>
+    <div class="green">
+        Green
+    </div>
+    <div class="yellow">
+        Yellow
+    </div>
+
+    <div class="green">
+        Green
+    </div>
+    <div class="blue">
+        Blue
+    </div>
+    <div class="yellow">
+        Yellow
+    </div>
+
+</div>
+
+</div>
 
 </body>
 </html>

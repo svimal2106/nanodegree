@@ -7,7 +7,7 @@ body, html {
 
 body {
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 14px;
   color: #424242;
 }
 
@@ -32,25 +32,16 @@ ul {
  * 
  */
 
-@media screen and (min-width: 700px){
-  body {
-    background-color: orange;
-  }
-}
-
-@media screen and (min-width: 800px){
-  body {
-    background-color: blue;
-  }
-}
-
 .news__more {
   float: right;
   font-size: .8em;
   color: #333;
   text-decoration: none;
-  min-width: 48px;
-  min-height: 48px;
+}
+
+.scores_div {
+  width: 100%;
+  overflow-x: auto;
 }
 
 
@@ -109,8 +100,7 @@ ul {
 .nav__item {
   box-sizing: border-box;
   display: inline-block;
-  min-width: 48px;
-  min-height: 48px;
+  width: 24%;
   text-align: center;
   line-height: 24px;
   padding: 24px;
@@ -120,6 +110,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -155,10 +146,9 @@ main {
  */
 
 .hero {
-  float: left;
   width: 100%;
   position: relative;
-  background-image: url("../lesson18/images/dog.jpg");
+  background-image: url("./images/dog.jpg");
   background-size: cover;
   height: 300px;
 }
@@ -183,11 +173,10 @@ main {
  */
 
 .top-news {
-  float: right;
-  width: 100%;
-  height: 300px;
+  max-height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
+  width: 100%;
 }
 
 .news__title {
@@ -195,21 +184,12 @@ main {
   border-bottom: 1px solid #E0E0E0;
   line-height: 24px;
   font-size: 16px;
-  min-width: 48px;
-  min-height: 48px;
 }
 
 .top-news__item {
   border-bottom: 1px solid #E0E0E0;
   padding: 1em 0;
   line-height: 19.2px;
-  min-width: 48px;
-
-}
-
-.clickable_link {
-  min-width: 48px;
-  min-height: 48px;
 }
 
 .top-news__item:before {
@@ -223,6 +203,7 @@ main {
 .top-news__item a {
   text-decoration: none;
   color: #666;
+  padding: 1.5em inherit;
 }
 
 .top-news__item a:hover,
@@ -238,9 +219,9 @@ main {
  */
 
 .scores {
-  width: 100%;
-  float: left;
   padding-top: 1em;
+  flex-grow: 1;
+  overflow-x: auto;
 }
 
 .scores__table {
@@ -287,8 +268,7 @@ main {
  */
 
 .weather {
-  float: right;
-  width: 100%;
+  flex-grow: 1;
   padding: 1em;
 }
 
@@ -338,11 +318,12 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
 .recent-news {
+  flex-grow: 1;
   clear: both;
   padding: 1em;
 }
@@ -353,7 +334,7 @@ main {
 }
 
 .snippet__thumbnail {
-  width: 100%;
+  width: 100px;
   float: left;
   margin-right: 1em;
 }
@@ -365,6 +346,7 @@ main {
 .snippet__title a {
   text-decoration: none;
   color: #666;
+  padding: 1.5em inherit;
 }
 
 .snippet__title a:hover,
@@ -393,4 +375,5 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
 }

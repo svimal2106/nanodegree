@@ -1,4 +1,5 @@
-body, html {
+body, 
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -11,11 +12,20 @@ body {
   color: #424242;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0; 
 }
 
-header, nav, footer, section, article, div {
+header,
+nav, 
+footer, 
+section, 
+article, 
+div {
   box-sizing: border-box;
 }
 
@@ -25,6 +35,18 @@ ul {
   margin: 0;
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
 
 /*
  *
@@ -32,25 +54,11 @@ ul {
  * 
  */
 
-@media screen and (min-width: 700px){
-  body {
-    background-color: orange;
-  }
-}
-
-@media screen and (min-width: 800px){
-  body {
-    background-color: blue;
-  }
-}
-
 .news__more {
   float: right;
   font-size: .8em;
   color: #333;
   text-decoration: none;
-  min-width: 48px;
-  min-height: 48px;
 }
 
 
@@ -109,8 +117,7 @@ ul {
 .nav__item {
   box-sizing: border-box;
   display: inline-block;
-  min-width: 48px;
-  min-height: 48px;
+  width: 24%;
   text-align: center;
   line-height: 24px;
   padding: 24px;
@@ -120,6 +127,7 @@ ul {
 .nav a {
   text-decoration: none;
   color: #616161;
+  padding: 1.5em;
 }
 
 .nav a:hover {
@@ -155,10 +163,9 @@ main {
  */
 
 .hero {
-  float: left;
   width: 100%;
   position: relative;
-  background-image: url("../lesson18/images/dog.jpg");
+  background-image: url("./images/dog.jpg");
   background-size: cover;
   height: 300px;
 }
@@ -183,8 +190,6 @@ main {
  */
 
 .top-news {
-  float: right;
-  width: 100%;
   height: 300px;
   border-bottom: 1px solid #E0E0E0;
   padding: 1em;
@@ -195,21 +200,12 @@ main {
   border-bottom: 1px solid #E0E0E0;
   line-height: 24px;
   font-size: 16px;
-  min-width: 48px;
-  min-height: 48px;
 }
 
 .top-news__item {
   border-bottom: 1px solid #E0E0E0;
   padding: 1em 0;
   line-height: 19.2px;
-  min-width: 48px;
-
-}
-
-.clickable_link {
-  min-width: 48px;
-  min-height: 48px;
 }
 
 .top-news__item:before {
@@ -238,8 +234,6 @@ main {
  */
 
 .scores {
-  width: 100%;
-  float: left;
   padding-top: 1em;
 }
 
@@ -287,8 +281,6 @@ main {
  */
 
 .weather {
-  float: right;
-  width: 100%;
   padding: 1em;
 }
 
@@ -304,12 +296,11 @@ main {
 }
 
 .weather__today {
-  width: 60%;
   vertical-align: middle;
 }
 
 .weather__today__image {
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 .weather__today__temp {
@@ -338,7 +329,7 @@ main {
 
 /*
  *
- * Weather
+ * Recent News
  *
  */
 
@@ -353,7 +344,7 @@ main {
 }
 
 .snippet__thumbnail {
-  width: 100%;
+  width: 100px;
   float: left;
   margin-right: 1em;
 }
@@ -393,4 +384,75 @@ footer li {
 footer a {
   text-decoration: none;
   color: #333;
+  padding: 1.5em;
+}
+
+@media screen and (min-width: 550px) {
+  .hero {
+    order: 0;
+    width: 60%;
+  }
+  .weather {
+    order: 1;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero {
+    width: 50%;
+  }
+  .top-news {
+    order: 1;
+    width: 50%;
+  }
+  .scores {
+    order: 2;
+    width: 60%;
+  }
+  .weather {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 800px) {
+    main, .header__inner, .nav, .content {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 549px){
+    .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
 }
