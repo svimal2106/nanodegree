@@ -20,5 +20,3 @@ lesson6/*.txt
 **/*.pyc
 
 # Image files
-**/*.png
-**/*.jpg
