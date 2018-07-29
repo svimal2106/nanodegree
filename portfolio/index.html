@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vimal Sharma Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <header class="portfolio__top__section">
+        <div class="top__section__inner">
+            <div class="top__section__left">
+                <img class="top__section__logo" src="images/iitk.jpg" alt="Logo of the undergraduate college">
+            </div>
+
+            <div class="top__section__right">
+                <div class="top__section__name">Vimal Sharma</div>
+                <div class="top__section__designation">Front-End Ninja</div>
+            </div>
+        </div>
+
+        <a id="menu" class="sidebar__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+        </a>
+    </header>
+
+    <main>
+
+        <nav id="drawer" class="sidebar__nav">
+          <i class="fas fa-bars"></i>
+          <ul class="sidebar__nav__list">
+            <li class="sidebar__nav__item"><a href="https://www.linkedin.com/in/vimal-sharma-a2163525">LinkedIn</a></li>
+            <li class="sidebar__nav__item"><a href="https://github.com/svimal2106">GitHub</a></li>
+            <li class="sidebar__nav__item"><a href="https://www.slideshare.net/vimalsharma357">SlideShare</a></li>
+          </ul>
+        </nav>
+
+        <section class="portfolio__mid">
+            <h2 class="portfolio__mid__title">Vimal at Fifth Elephant Conference</h2>
+            <img class="conference__image" src="images/fifth_elephant_conference.jpg" alt="Vimal speaking at Fifth Elephant Conference">
+            <p class="portfolio__content">
+                Vimal is a Software Engineer at Hortonworks. Vimal is a PMC member and Committer in Apache Atlas project.
+                Vimal is a quick learner and is perenially hungry to explore new technologies
+            </p>
+        </section>
+
+        <section class="featured__conferences">
+            <h2 class="featured__conferences__title">
+                Featured Conferences
+            </h2>
+
+            <div class="conferences__list">
+                <div class="conference__next">
+                    <picture>
+                        <source media="print" srcset="images/fifth_elephant_small.png">
+                        <source media="(min-width:550px)" srcset="images/fifth_elephant_big.png">
+                        <img class="conference__next_image" src="images/fifth_elephant_small.png" alt="Vimal speaking at Fifth Elephant Conference 2017">
+                    </picture>
+                    <p class="conference__next__title">FifthEl</p>
+                    <a class="conference__next__link" href="https://fifthelephant.talkfunnel.com/2017/62-governance-using-apache-atlas-why-and-how">Fifth Elephant</a>
+                </div>
+
+                <div class="conference__next">
+                    <picture>
+                        <source media="print" srcset="images/open_source_summit_small.png">
+                        <source media="(min-width:550px)" srcset="images/oss_big.png">
+                        <img class="conference__next_image" src="images/open_source_summit_small.png" alt="Vimal speaking at Open Source Summit 2017">
+                    </picture>
+                    <p class="conference__next__title">OSS</p>
+                    <a class="conference__next__link" href="https://osseu17.sched.com/event/89a7fc8b621089551331f5881d36f4ef">Open Source Summit 2017</a>
+                </div>
+
+                <div class="conference__next">
+                    <picture>
+                        <source media="print" srcset="images/apache_support.png">
+                        <source media="(min-width:550px)" srcset="images/apachecon_small.png">
+                        <img class="conference__next_image" src="images/apachecon.png" alt="Vimal speaking at ApacheCon 2017">
+                    </picture>
+                    <p class="conference__next__title">ApacheCon</p>
+                    <a class="conference__next__link" href="https://apachebigdata2017.sched.com/event/A03h">ApacheCon 2017</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="portfolio__footer">
+        <p class="portfolio__copyright">&copy; Copyright by Vimal Sharma. All rights reserved</p>
+        <p>
+    </footer>
+
+    <script>
+        var menu = document.querySelector('#menu');
+        var main = document.querySelector('main');
+        var drawer = document.querySelector('.sidebar__nav');
+
+        menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+        });
+        main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        });
+    </script>
+
+</body>
+</html>

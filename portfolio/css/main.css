@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #424242;
+    box-sizing: border-box;
+}
+
+.top__section__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top__section__name, .top__section__designation {
+    font-family: "Lucinda Grande", "Lucinda Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    font-variant: all-small-caps;
+    text-align: right;
+}
+
+.top__section__logo {
+    height: 80px;
+}
+
+.top__section__name {
+    font-size: 60px;
+}
+
+.top__section__designation {
+    font-size: 20px;
+}
+
+.sidebar__nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar__nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.sidebar__nav a {
+  text-decoration: none;
+  color: #616161;
+  padding: 1.5em;
+}
+
+.sidebar__nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+.sidebar__menu {
+  display: none;
+}
+
+.portfolio__mid__title {
+    font-family: "Helvetica Neue", Arial, Verdana, sans-serif;
+    color: gray;
+    font-size: 30px;
+}
+
+.portfolio__content {
+    font-family: Monospaced;
+    font-size: 20px;
+}
+
+.featured__conferences__title {
+    font-family: "Helvetica Neue", Arial, Verdana, sans-serif;
+    font-variant: all-small-caps;
+    color: gray;
+    font-size: 25px;
+}
+
+.conference__image {
+    max-width: 100%;
+}
+
+.conferences__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conference__next {
+    text-align: center;
+    width: 33%;
+}
+
+.conference__next_image {
+    height: 150px;
+    width: 90%;
+}
+
+.conference__next__title {
+    font-family: "Lucinda Grande", "Lucinda Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    font-variant: all-small-caps;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.portfolio__copyright{
+    font-size: 12px;
+}
+
+@media screen and (min-width: 850px) {
+    body, main {
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .conferences__list {
+        display: inline-grid;
+    }
+
+    .conference__next {
+        width: 100%;
+    }
+
+    .top__section__name {
+        font-size: 40px;
+    }
+
+    .featured__conferences__title, .conference__next__title {
+        font-size: 25px;
+    }
+
+    .sidebar__nav {
+        z-index: 10;
+        background-color: #fff;
+        width: 300px;
+        position: absolute;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+    }
+    .sidebar__nav.open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    .sidebar__nav__item {
+        display: list-item;
+        border-bottom: 1px solid #E0E0E0;
+        width: 100%;
+        text-align: left;
+    }
+    .sidebar__menu {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+    .sidebar__menu svg {
+        width: 32px;
+        fill: #E0E0E0;
+    }
+}
